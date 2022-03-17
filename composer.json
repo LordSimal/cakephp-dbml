@@ -1,0 +1,40 @@
+{
+    "name": "lordsimal/cakephp-dbml",
+    "description": "A DBML plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Pfeifer",
+            "email": "info@pfeiferkevin.at"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "cakephp/cakephp": "^4.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "cakephp/cakephp-codesniffer": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LordSimal\\CakephpDbml\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LordSimal\\CakephpDbml\\Test\\": "tests/",
+            "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+        }
+    },
+    "scripts": {
+        "cs-check": "phpcs -n -p --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests",
+        "cs-fix": "phpcbf --standard=vendor/cakephp/cakephp-codesniffer/CakePHP ./src ./tests"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
