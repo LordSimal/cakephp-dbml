@@ -11,7 +11,7 @@ See https://www.dbml.org/, https://dbdiagram.io and https://dbdocs.io/ to get mo
 The recommended way to install this plugin via [composer](https://getcomposer.org) is:
 
 ```
-composer require lordsimal/cakephp-dbml
+composer require lordsimal/cakephp-dbml --dev
 ```
 
 Then execute
