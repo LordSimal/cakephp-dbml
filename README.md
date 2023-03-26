@@ -1,6 +1,8 @@
 
 # CakePHP 4 DBML plugin
 
+[![Latest Stable Version](http://poser.pugx.org/lordsimal/cakephp-dbml/v)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![Total Downloads](http://poser.pugx.org/lordsimal/cakephp-dbml/downloads)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![Latest Unstable Version](http://poser.pugx.org/lordsimal/cakephp-dbml/v/unstable)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![License](http://poser.pugx.org/lordsimal/cakephp-dbml/license)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![PHP Version Require](http://poser.pugx.org/lordsimal/cakephp-dbml/require/php)](https://packagist.org/packages/lordsimal/cakephp-dbml)
+
 This plugin generates a DBML file from your current present CakePHP table files including plugin ones.
 
 See https://www.dbml.org/, https://dbdiagram.io and https://dbdocs.io/ to get more information about DBML.
