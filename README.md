@@ -1,7 +1,7 @@
 
 # CakePHP 4 DBML plugin
 
-[![Latest Stable Version](http://poser.pugx.org/lordsimal/cakephp-dbml/v)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![Total Downloads](http://poser.pugx.org/lordsimal/cakephp-dbml/downloads)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![Latest Unstable Version](http://poser.pugx.org/lordsimal/cakephp-dbml/v/unstable)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![License](http://poser.pugx.org/lordsimal/cakephp-dbml/license)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![PHP Version Require](http://poser.pugx.org/lordsimal/cakephp-dbml/require/php)](https://packagist.org/packages/lordsimal/cakephp-dbml)
+[![Latest Stable Version](https://poser.pugx.org/lordsimal/cakephp-dbml/v)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![Total Downloads](https://poser.pugx.org/lordsimal/cakephp-dbml/downloads)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![Latest Unstable Version](https://poser.pugx.org/lordsimal/cakephp-dbml/v/unstable)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![License](https://poser.pugx.org/lordsimal/cakephp-dbml/license)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![PHP Version Require](https://poser.pugx.org/lordsimal/cakephp-dbml/require/php)](https://packagist.org/packages/lordsimal/cakephp-dbml)
 
 This plugin generates a DBML file from your current present CakePHP table files including plugin ones.
 
