@@ -2,8 +2,10 @@
 /composer.phar
 /phpunit.xml
 /.phpunit.result.cache
+/.phpcs.cache
 /phpunit.phar
 /config/Migrations/schema-dump-default.lock
 /vendor/
 /.idea/
 /setup
+/cakephp.db

@@ -52,7 +52,7 @@ class DbmlFormatter
     /**
      * @return array
      */
-    public function format()
+    public function format(): array
     {
         $inBlacklistedTables = in_array($this->schema->name(), $this->blacklistedTables, true);
         $isAlreadyProcessed = isset($this->result[$this->schema->name()]);
@@ -83,7 +83,7 @@ class DbmlFormatter
     /**
      * @return void
      */
-    private function addTable()
+    private function addTable(): void
     {
         $this->result[$this->schema->name()] = [];
         $this->result[$this->schema->name()]['columns'] = [];
@@ -120,7 +120,7 @@ class DbmlFormatter
      * @param string $column Is the given column name a primary key in the current schema?
      * @return bool
      */
-    private function isPK(string $column)
+    private function isPK(string $column): bool
     {
         $pk = $this->schema->getPrimaryKey();
 
@@ -132,7 +132,7 @@ class DbmlFormatter
      * @param bool $isManyToOne Is this a manyToOne relation type?
      * @return void
      */
-    private function addAssoc(array $relations, bool $isManyToOne = false)
+    private function addAssoc(array $relations, bool $isManyToOne = false): void
     {
         /** @var \Cake\ORM\Association $relation */
         foreach ($relations as $relation) {
@@ -169,7 +169,7 @@ class DbmlFormatter
      * @param array $relations array of relations
      * @return void
      */
-    private function addManyToMany(array $relations)
+    private function addManyToMany(array $relations): void
     {
         /** @var \Cake\ORM\Association\BelongsToMany $relation */
         foreach ($relations as $relation) {

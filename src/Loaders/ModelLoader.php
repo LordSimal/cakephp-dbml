@@ -85,7 +85,7 @@ class ModelLoader
                 /** @var \SplFileInfo[] $files */
                 $files = new RecursiveIteratorIterator(
                     new RecursiveDirectoryIterator($folder),
-                    RecursiveIteratorIterator::LEAVES_ONLY
+                    RecursiveIteratorIterator::LEAVES_ONLY,
                 );
 
                 foreach ($files as $file) {

@@ -1,5 +1,5 @@
 
-# CakePHP 4 DBML plugin
+# CakePHP DBML plugin
 
 [![Latest Stable Version](https://poser.pugx.org/lordsimal/cakephp-dbml/v)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![Total Downloads](https://poser.pugx.org/lordsimal/cakephp-dbml/downloads)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![Latest Unstable Version](https://poser.pugx.org/lordsimal/cakephp-dbml/v/unstable)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![License](https://poser.pugx.org/lordsimal/cakephp-dbml/license)](https://packagist.org/packages/lordsimal/cakephp-dbml) [![PHP Version Require](https://poser.pugx.org/lordsimal/cakephp-dbml/require/php)](https://packagist.org/packages/lordsimal/cakephp-dbml)
 

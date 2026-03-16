@@ -15,7 +15,7 @@ trait BlacklistedPluginsTrait
     /**
      * @return void
      */
-    public static function initBacklist()
+    public static function initBacklist(): void
     {
         self::$blacklistedPlugins = Configure::read('Dbml.blacklistedPlugins');
     }
@@ -24,7 +24,7 @@ trait BlacklistedPluginsTrait
      * @param string $plugin The plugin name
      * @return bool
      */
-    public static function isBlacklisted(string $plugin)
+    public static function isBlacklisted(string $plugin): bool
     {
         return in_array($plugin, self::$blacklistedPlugins, true);
     }

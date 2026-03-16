@@ -6,7 +6,6 @@ namespace LordSimal\CakephpDbml\Command;
 use Cake\Command\Command;
 use Cake\Console\Arguments;
 use Cake\Console\ConsoleIo;
-use Cake\Console\ConsoleOptionParser;
 use LordSimal\CakephpDbml\DbmlFormatter;
 use LordSimal\CakephpDbml\DbmlWriter;
 use LordSimal\CakephpDbml\Loaders\ModelLoader;
@@ -17,20 +16,6 @@ use LordSimal\CakephpDbml\Loaders\RelationLoader;
  */
 class GenerateDbmlCommand extends Command
 {
-    /**
-     * Hook method for defining this command's option parser.
-     *
-     * @see https://book.cakephp.org/4/en/console-commands/commands.html#defining-arguments-and-options
-     * @param \Cake\Console\ConsoleOptionParser $parser The parser to be defined
-     * @return \Cake\Console\ConsoleOptionParser The built parser.
-     */
-    public function buildOptionParser(ConsoleOptionParser $parser): ConsoleOptionParser
-    {
-        $parser = parent::buildOptionParser($parser);
-
-        return $parser;
-    }
-
     /**
      * Implement this method with your command's logic.
      *
@@ -47,8 +32,8 @@ class GenerateDbmlCommand extends Command
 
         $dbmlFormatter = new DbmlFormatter();
 
-        foreach ($result as $plugin => $pluginData) :
-            foreach ($pluginData as $model => $modelData) :
+        foreach ($result as $pluginData) :
+            foreach ($pluginData as $modelData) :
                 if (isset($modelData['schema'])) {
                     $dbmlFormatter->setSchema($modelData['schema']);
 

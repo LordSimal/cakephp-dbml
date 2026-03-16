@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace LordSimal\CakephpDbml;
 
 use Cake\Core\Configure;
+use Exception;
 
 class DbmlWriter
 {
@@ -26,7 +27,7 @@ class DbmlWriter
         $filename = Configure::read('Dbml.filename');
         $this->path = $path . $filename;
         if (!is_writable($path)) {
-            throw new \Exception('Filepath "' . $path . '" is not writable!');
+            throw new Exception('Filepath "' . $path . '" is not writable!');
         }
         if (file_exists($this->path)) {
             unlink($this->path);
@@ -37,7 +38,7 @@ class DbmlWriter
      * @param array $result Write the result from $dbmlFormatter->format() to the configured path
      * @return void
      */
-    public function write(array $result)
+    public function write(array $result): void
     {
         foreach ($result as $tableName => $tableData) :
             $this->append(sprintf('Table "%s" {', $tableName));
@@ -48,8 +49,8 @@ class DbmlWriter
                             '    "%s" %s [%s]',
                             $column['name'],
                             $column['type'],
-                            implode(' ', $column['additional'])
-                        )
+                            implode(' ', $column['additional']),
+                        ),
                     );
                 } else {
                     $this->append(sprintf('    "%s" %s', $column['name'], $column['type']));
@@ -67,7 +68,7 @@ class DbmlWriter
 
             foreach ($tableData['associations'] as $association) :
                 $this->append(
-                    sprintf('Ref: %s.%s > %s.%s', $association[0], $association[1], $association[2], $association[3])
+                    sprintf('Ref: %s.%s > %s.%s', $association[0], $association[1], $association[2], $association[3]),
                 );
             endforeach;
 
@@ -82,7 +83,7 @@ class DbmlWriter
      * @param bool $newLine Should a new line be added at the end
      * @return void
      */
-    private function append(string $text = '', bool $newLine = true)
+    private function append(string $text = '', bool $newLine = true): void
     {
         if ($newLine) {
             $text .= PHP_EOL;

@@ -8,6 +8,6 @@ return [
             'DebugKit',
             'Migrations',
         ],
-        'blacklistedTables' => []
-    ]
+        'blacklistedTables' => [],
+    ],
 ];
