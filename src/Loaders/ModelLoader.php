@@ -70,6 +70,8 @@ class ModelLoader
             $models[] = $matches[1];
         }
 
+        sort($models);
+
         return $models;
     }
 
