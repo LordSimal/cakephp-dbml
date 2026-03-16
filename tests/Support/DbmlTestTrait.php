@@ -32,7 +32,7 @@ trait DbmlTestTrait
         Configure::write('Dbml.blacklistedTables', []);
 
         ConnectionManager::alias('test', 'default');
-        Plugin::setCollection(new PluginCollection());
+        $this->resetPluginCollection();
         FactoryLocator::drop('Table');
         FactoryLocator::add('Table', new TableLocator());
     }
@@ -40,7 +40,7 @@ trait DbmlTestTrait
     protected function tearDownDbmlTestEnvironment(): void
     {
         ConnectionManager::dropAlias('default');
-        Plugin::setCollection(new PluginCollection());
+        $this->resetPluginCollection();
         FactoryLocator::drop('Table');
         FactoryLocator::add('Table', new TableLocator());
 
@@ -63,6 +63,17 @@ trait DbmlTestTrait
         $locator->setConfig('TestPlugin.Comments', ['className' => Model\Table\PluginCommentsTable::class]);
 
         return $locator;
+    }
+
+    protected function resetPluginCollection(): void
+    {
+        if (method_exists(Plugin::class, 'setCollection')) {
+            Plugin::setCollection(new PluginCollection());
+
+            return;
+        }
+
+        Plugin::getCollection()->clear();
     }
 
     protected function createOrmSchema(): void
